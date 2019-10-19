@@ -56,11 +56,19 @@ public class HandIK : MonoBehaviour
         //    }
         //}
 
-        if (_foodQueue.Count > 0 && _routine == null)
+        if (_foodQueue.Count > 0)
         {
-            //if (_hasEaten && _routine != null) StopCoroutine(_routine);
-            _routine = GrabRoutine(_foodQueue.Dequeue());
-            StartCoroutine(_routine);
+            //if (_hasEaten)
+            //{
+            //    StopCoroutine(_routine);
+            //    _routine = GrabRoutine(_foodQueue.Dequeue());
+            //    StartCoroutine(_routine);
+            //}
+            /*else*/ if (_routine is null)
+            {
+                _routine = GrabRoutine(_foodQueue.Dequeue());
+                StartCoroutine(_routine);
+            }
         }
     }
 
@@ -87,7 +95,8 @@ public class HandIK : MonoBehaviour
         _mouth.Eat(consumable);
         _hasEaten = true;
 
-        yield return StartCoroutine(LerpTo(_handIKBone, _handIKBone, _handOrigin, _grabSpeed));
+        //yield return StartCoroutine(LerpTo(_handIKBone, _handIKBone, _handOrigin, _grabSpeed));
+        _handIKBone.position = _handOrigin.position;
 
         _hasEaten = false;
         _routine = null;

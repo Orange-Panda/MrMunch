@@ -7,7 +7,11 @@ using UnityEngine;
 /// </summary>
 public class MonsterMotor : MonoBehaviour
 {
+    [SerializeField] private Material _unselected;
+    [SerializeField] private Material _selected;
+
     [SerializeField] private Camera _characterCamera;
+    [SerializeField] private Animator _animator;
 
     [SerializeField] private float _moveSpeed;
     [SerializeField] private float _rotateSpeed;
@@ -47,6 +51,8 @@ public class MonsterMotor : MonoBehaviour
         Quaternion targetRotation = Quaternion.Slerp(transform.rotation, rotation, Time.fixedDeltaTime * inputAmount * _rotateSpeed);
         transform.rotation = targetRotation;
         
+        _animator.SetBool("Moving", inputMagnitude != 0);
+
         // Ideally you'd set the animator stuff now but we don't have that yet
         transform.position += moveDirection * Time.deltaTime * inputAmount * _moveSpeed;
     }
@@ -59,7 +65,7 @@ public class MonsterMotor : MonoBehaviour
 
             var consumable = other.GetComponent<Consumable>();
 
-            other.GetComponent<Renderer>().material.color = Color.blue;
+            other.GetComponent<Renderer>().material = _selected;
 
             if (consumable is null)
             {
@@ -67,7 +73,7 @@ public class MonsterMotor : MonoBehaviour
                 return;
             }
 
-            //if (consumable.Flagged) return;
+            if (consumable.Flagged) return;
 
             // Determine which side of the sphere it is on
             var heading = transform.position - other.transform.position;

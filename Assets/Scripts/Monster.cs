@@ -23,7 +23,7 @@ public class Monster : MonoBehaviour
 
 	private void Start()
 	{
-		_material = GetComponent<Renderer>().material;
+		//_material = GetComponent<Renderer>().material;
 	}
 
 	public void AdjustColor()
