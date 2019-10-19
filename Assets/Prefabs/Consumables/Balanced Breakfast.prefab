@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &565791814591522437
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438887472217398067}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.00019500009, y: 0.0011273037, z: 0.00006700191}
+  m_Center: {x: -1.1266801e-10, y: 0.00006115174, z: 0.00003350095}
 --- !u!114 &7190477407782538018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12,9 +25,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1bd843319fe63499e448e50cc13ceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sizeRequirement: 0
   _fillAmount: 0.1
   _type: {fileID: 11400000, guid: 1b56bbf64f3057944b89941f9345956b, type: 2}
   Flagged: 0
+--- !u!65 &9210426537370022333
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1809591730119592901}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0029999998, y: 0.0029999993, z: 0.00034999984}
+  m_Center: {x: 0, y: 0, z: 0.00017499992}
 --- !u!114 &5679312029521918146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27,9 +54,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1bd843319fe63499e448e50cc13ceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sizeRequirement: 0
   _fillAmount: 0.5
   _type: {fileID: 11400000, guid: 043db201a1d3d7a48a07989f40093e58, type: 2}
   Flagged: 0
+--- !u!65 &314656406215417185
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2379882798688967407}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0011658075, y: 0.00087716425, z: 0.0009853797}
+  m_Center: {x: -0.00014432154, y: -8.9908095e-11, z: 0.00050389086}
 --- !u!114 &4877162228247570513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,6 +83,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1bd843319fe63499e448e50cc13ceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sizeRequirement: 0
   _fillAmount: 0.1
   _type: {fileID: 11400000, guid: 6f994ed4ffa79ff41b02bde8a0814839, type: 2}
   Flagged: 0
@@ -56,7 +98,7 @@ GameObject:
   - component: {fileID: 6109668982928205213}
   m_Layer: 0
   m_Name: Balanced Breakfast
-  m_TagString: Untagged
+  m_TagString: Consumable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,6 +120,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &659549207371753144
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7766910250807801974}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.00019500004, y: 0.0012713302, z: 0.00008649919}
+  m_Center: {x: 1.9843155e-12, y: 0.00013316509, z: 0.000043249653}
 --- !u!114 &3246685014279705135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,6 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff1bd843319fe63499e448e50cc13ceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sizeRequirement: 0
   _fillAmount: 0.1
   _type: {fileID: 11400000, guid: 1b56bbf64f3057944b89941f9345956b, type: 2}
   Flagged: 0
@@ -108,7 +164,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 9ce5cb36dd6d47649a0ab082748575a6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.003665369
+      value: 0.0006
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9ce5cb36dd6d47649a0ab082748575a6,
         type: 3}
@@ -118,7 +174,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 9ce5cb36dd6d47649a0ab082748575a6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.11290072
+      value: 0.1249
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9ce5cb36dd6d47649a0ab082748575a6,
         type: 3}

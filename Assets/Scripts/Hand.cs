@@ -5,6 +5,7 @@ using UnityEngine;
 public class Hand : MonoBehaviour
 {
     [SerializeField] private MonsterMouth _mouth;
+    [SerializeField] private bool _useAnimationEvents = true;
 
     private List<Consumable> _pickUps = new List<Consumable>();
 
@@ -13,11 +14,17 @@ public class Hand : MonoBehaviour
         if (other.CompareTag("Consumable"))
         {
             var consumable = other.GetComponent<Consumable>();
-            if (consumable != null)
-                _pickUps.Add(consumable);
+            if (consumable is null) return;
 
-            other.transform.position = transform.position;
-            other.transform.parent = transform;
+            _pickUps.Add(consumable);
+            consumable.Collider.enabled = false;
+
+            if (_useAnimationEvents)
+            {
+                other.transform.position = transform.position;
+                other.transform.parent = transform;
+            }
+            else EatPickUps();
         }
     }
 

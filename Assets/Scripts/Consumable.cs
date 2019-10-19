@@ -12,6 +12,7 @@ public enum MonsterScale
 /// <summary>
 /// Marks a game object as consumable for the player
 /// </summary>
+[RequireComponent(typeof(BoxCollider))]
 public class Consumable : MonoBehaviour
 {
     [Tooltip("How big must the monster be to eat?")]
@@ -27,4 +28,13 @@ public class Consumable : MonoBehaviour
 
     // Allows checking to see if it is in the queue for the hand to grab yet
     [HideInInspector] public bool Flagged = false;
+
+
+    // Cache this so we can disable it whenever it gets parented
+    [HideInInspector] public Collider Collider;
+
+    private void Start()
+    {
+        Collider = GetComponent<Collider>();
+    }
 }
