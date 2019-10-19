@@ -20,10 +20,19 @@ public class MonsterMotor : MonoBehaviour
     //[SerializeField] private HandIK _rightHand;
 
     private CharacterController _controller;
+
+    private int _layerMask;
+    private bool _isGrounded = false;
+
+    //private float yDir;
+    //private float gravity = 2f;
     
     private void Start()
     {
         _controller = GetComponent<CharacterController>();
+
+        _layerMask = LayerMask.GetMask("Player");
+        _layerMask = ~_layerMask;
     }
     
     private void Update()
@@ -52,6 +61,17 @@ public class MonsterMotor : MonoBehaviour
         transform.rotation = targetRotation;
         
         _animator.SetBool("Moving", inputMagnitude != 0);
+
+        //if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, 10f, _layerMask))
+        //{
+        //    _isGrounded = !(hit.distance > .4f);
+        //}
+        //else _isGrounded = false;
+
+        //if (!_isGrounded) yDir -= gravity;
+        //else yDir = 0;
+
+        //transform.position += new Vector3(0, yDir, 0);
 
         // Ideally you'd set the animator stuff now but we don't have that yet
         transform.position += moveDirection * Time.deltaTime * inputAmount * _moveSpeed;

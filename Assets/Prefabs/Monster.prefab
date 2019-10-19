@@ -14,6 +14,19 @@ CapsuleCollider:
   m_Height: 3.9
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2528970054204620412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2833658589589896821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e05827f0d7611e418fd1f553e1fc1c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mouth: {fileID: 4482821237449771662}
 --- !u!1 &4482821237449771701
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,7 +270,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70cc86dc6408bed429d12288afcb190a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _eatSpeed: 0.25
   _munchFX: {fileID: 3721445734587494056}
+  _mouthOrigin: {fileID: 4482821238920164790}
 --- !u!114 &4482821237449771660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,6 +343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e05827f0d7611e418fd1f553e1fc1c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _mouth: {fileID: 4482821237449771662}
 --- !u!114 &4393191061570692114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,6 +356,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ad3f5a00a87560498f7c0e726a71b76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _leftHand: {fileID: 0}
+  _rightHand: {fileID: 0}
 --- !u!1001 &56837173688785783
 PrefabInstance:
   m_ObjectHideFlags: 0

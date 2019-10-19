@@ -1,15 +1,27 @@
 ﻿using UnityEngine;
 
+public enum MonsterScale
+{
+    Tiny,
+    Small,
+    Medium,
+    Large,
+    Huge
+}
+
 /// <summary>
 /// Marks a game object as consumable for the player
 /// </summary>
 public class Consumable : MonoBehaviour
 {
+    [Tooltip("How big must the monster be to eat?")]
+    [SerializeField] private MonsterScale _sizeRequirement;
     [Tooltip("How much should this fill up the monster?")]
     [SerializeField] private float _fillAmount;
     [Tooltip("What type of item is this?")]
     [SerializeField] private MunchType _type;
 
+    public MonsterScale SizeRequirement => _sizeRequirement;
     public float FillAmount => _fillAmount;
     public MunchType Type => _type;
 

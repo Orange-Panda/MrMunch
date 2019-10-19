@@ -16,6 +16,7 @@ public class Hand : MonoBehaviour
             if (consumable != null)
                 _pickUps.Add(consumable);
 
+            other.transform.position = transform.position;
             other.transform.parent = transform;
         }
     }
