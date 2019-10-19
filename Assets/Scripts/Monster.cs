@@ -29,7 +29,7 @@ public class Monster : MonoBehaviour
 	public void AdjustColor()
 	{
 		// Change color over time
-		_material.color += new Color(PercentageFull, 0, 0, 0);
+		//_material.color += new Color(PercentageFull, 0, 0, 0);
 	}
 
 	public void CheckValue()

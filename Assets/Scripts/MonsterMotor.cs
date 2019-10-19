@@ -16,8 +16,8 @@ public class MonsterMotor : MonoBehaviour
     [SerializeField] private float _moveSpeed;
     [SerializeField] private float _rotateSpeed;
 
-    [SerializeField] private HandIK _leftHand;
-    [SerializeField] private HandIK _rightHand;
+    //[SerializeField] private HandIK _leftHand;
+    //[SerializeField] private HandIK _rightHand;
 
     private CharacterController _controller;
     
@@ -57,44 +57,44 @@ public class MonsterMotor : MonoBehaviour
         transform.position += moveDirection * Time.deltaTime * inputAmount * _moveSpeed;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Consumable"))
-        {
-            Debug.Log("Found consumable");
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.CompareTag("Consumable"))
+    //    {
+    //        Debug.Log("Found consumable");
 
-            var consumable = other.GetComponent<Consumable>();
+    //        var consumable = other.GetComponent<Consumable>();
 
-            other.GetComponent<Renderer>().material = _selected;
+    //        other.GetComponent<Renderer>().material = _selected;
 
-            if (consumable is null)
-            {
-                Debug.LogWarning("Object was tagged as consumable but wasn't");
-                return;
-            }
+    //        if (consumable is null)
+    //        {
+    //            Debug.LogWarning("Object was tagged as consumable but wasn't");
+    //            return;
+    //        }
 
-            if (consumable.Flagged) return;
+    //        if (consumable.Flagged) return;
 
-            // Determine which side of the sphere it is on
-            var heading = transform.position - other.transform.position;
-            var dotProduct = Vector3.Dot(heading, transform.right);
+    //        // Determine which side of the sphere it is on
+    //        var heading = transform.position - other.transform.position;
+    //        var dotProduct = Vector3.Dot(heading, transform.right);
 
-            // might have the direction wrong
-            dotProduct *= -1;
+    //        // might have the direction wrong
+    //        dotProduct *= -1;
 
-            // Tell hand to grab
-            if (dotProduct > 0)         // to the right
-            {
-                _rightHand.Grab(consumable);
-            }
-            else if (dotProduct < 0)    // to the left
-            {
-                _leftHand.Grab(consumable);
-            }
-            else                        // in center 
-            {
-                _leftHand.Grab(consumable);
-            }
-        }
-    }
+    //        // Tell hand to grab
+    //        if (dotProduct > 0)         // to the right
+    //        {
+    //            _rightHand.Grab(consumable);
+    //        }
+    //        else if (dotProduct < 0)    // to the left
+    //        {
+    //            _leftHand.Grab(consumable);
+    //        }
+    //        else                        // in center 
+    //        {
+    //            _leftHand.Grab(consumable);
+    //        }
+    //    }
+    //}
 }
