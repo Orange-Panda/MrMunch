@@ -1,120 +1,49 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 /// <summary>
-/// Monster movement
+/// Monster movement and rotation.
 /// </summary>
 public class MonsterMotor : MonoBehaviour
 {
-    [SerializeField] private Material _unselected;
-    [SerializeField] private Material _selected;
+	new private Camera camera;
+	new private Rigidbody rigidbody;
+	private Animator animator;
+	private float moveSpeed = 10;
+	private float rotateSpeed = 7;
+	private Quaternion lastDirection;
+	private int layerMask;
 
-    [SerializeField] private Camera _characterCamera;
-    [SerializeField] private Animator _animator;
+	private void Start()
+	{
+		camera = FindObjectOfType<Camera>();
+		rigidbody = GetComponent<Rigidbody>();
+		animator = GetComponentInChildren<Animator>();
+		layerMask = LayerMask.GetMask("Player");
+		layerMask = ~layerMask;
+	}
 
-    [SerializeField] private float _moveSpeed;
-    [SerializeField] private float _rotateSpeed;
+	private void Update()
+	{
+		// Get user input
+		Vector2 userInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 
-    //[SerializeField] private HandIK _leftHand;
-    //[SerializeField] private HandIK _rightHand;
+		// Adjust off camera position
+		Vector3 adjustedInput = (userInput.x * camera.transform.right) + (userInput.y * camera.transform.forward);
 
-    private CharacterController _controller;
+		// normalize the direction and remove the y component from the vector
+		Vector3 moveDirection = new Vector3(adjustedInput.normalized.x, 0, adjustedInput.normalized.z);
 
-    private int _layerMask;
-    private bool _isGrounded = false;
+		// Get a scalar for how much input is being sent
+		var inputAmount = Mathf.Clamp01(Mathf.Abs(userInput.x) + Mathf.Abs(userInput.y));
 
-    //private float yDir;
-    //private float gravity = 2f;
-    
-    private void Start()
-    {
-        _controller = GetComponent<CharacterController>();
+		// Rotate player
+		if (moveDirection != Vector3.zero) lastDirection = Quaternion.LookRotation(moveDirection);
+		transform.rotation = Quaternion.Slerp(transform.rotation, lastDirection, Time.deltaTime * rotateSpeed);
 
-        _layerMask = LayerMask.GetMask("Player");
-        _layerMask = ~_layerMask;
-    }
-    
-    private void Update()
-    {
-        // get input
-        var input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+		// Animator state
+		animator.SetBool("Moving", inputAmount != 0);
 
-        // Multiply by camera orientation
-        Vector3 correctedHorizontal = input.x * _characterCamera.transform.right;
-        Vector3 correctedVertical = input.y * _characterCamera.transform.forward;
-
-        // Combine
-        Vector3 combinedInput = correctedHorizontal + correctedVertical;
-
-        // normalize the direction and remove the y component from the vector
-        var moveDirection = new Vector3((combinedInput).normalized.x, 0, (combinedInput).normalized.z);
-
-        // Get an overall magnitude and amount for animation (and for analog controls)
-        float inputMagnitude = Mathf.Abs(input.x) + Mathf.Abs(input.y);
-        var inputAmount = Mathf.Clamp01(inputMagnitude);
-
-        // rotate player to movement direction smoothly
-        Quaternion rotation = Quaternion.identity;
-        if (moveDirection != Vector3.zero) rotation = Quaternion.LookRotation(moveDirection);
-        Quaternion targetRotation = Quaternion.Slerp(transform.rotation, rotation, Time.fixedDeltaTime * inputAmount * _rotateSpeed);
-        transform.rotation = targetRotation;
-        
-        _animator.SetBool("Moving", inputMagnitude != 0);
-
-        //if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, 10f, _layerMask))
-        //{
-        //    _isGrounded = !(hit.distance > .4f);
-        //}
-        //else _isGrounded = false;
-
-        //if (!_isGrounded) yDir -= gravity;
-        //else yDir = 0;
-
-        //transform.position += new Vector3(0, yDir, 0);
-
-        // Ideally you'd set the animator stuff now but we don't have that yet
-        transform.position += moveDirection * Time.deltaTime * inputAmount * _moveSpeed;
-    }
-
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.CompareTag("Consumable"))
-    //    {
-    //        Debug.Log("Found consumable");
-
-    //        var consumable = other.GetComponent<Consumable>();
-
-    //        other.GetComponent<Renderer>().material = _selected;
-
-    //        if (consumable is null)
-    //        {
-    //            Debug.LogWarning("Object was tagged as consumable but wasn't");
-    //            return;
-    //        }
-
-    //        if (consumable.Flagged) return;
-
-    //        // Determine which side of the sphere it is on
-    //        var heading = transform.position - other.transform.position;
-    //        var dotProduct = Vector3.Dot(heading, transform.right);
-
-    //        // might have the direction wrong
-    //        dotProduct *= -1;
-
-    //        // Tell hand to grab
-    //        if (dotProduct > 0)         // to the right
-    //        {
-    //            _rightHand.Grab(consumable);
-    //        }
-    //        else if (dotProduct < 0)    // to the left
-    //        {
-    //            _leftHand.Grab(consumable);
-    //        }
-    //        else                        // in center 
-    //        {
-    //            _leftHand.Grab(consumable);
-    //        }
-    //    }
-    //}
+		// Move player
+		rigidbody.MovePosition(transform.position + moveDirection * Time.deltaTime * inputAmount * moveSpeed);
+	}
 }
