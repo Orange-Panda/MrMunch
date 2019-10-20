@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 723a1f619bed4104bb6d74c6820d1439, type: 3}
-  m_Name: Organic Munch
+  m_Name: Small Metallic Munch
   m_EditorClassIdentifier: 
-  _munchMesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
-  _munchMaterial: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
-  _munchSound: {fileID: 8300000, guid: 9cdadb13cb664b949b58a4416fad487f, type: 3}
+  _munchMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  _munchMaterial: {fileID: 0}
+  _munchSounds:
+  - {fileID: 8300000, guid: 5cfee92de409ff344bcc5a13d33e7e6f, type: 3}
+  - {fileID: 8300000, guid: 42972fc77d50d6548830a1041169bc2d, type: 3}

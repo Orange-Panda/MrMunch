@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
+using Random = UnityEngine.Random;
 
 /// <summary>
 /// Sort of an extendable data holding enum for different item types
@@ -12,10 +15,10 @@ public class MunchType : ScriptableObject
     [SerializeField] private Material _munchMaterial;
 
     [Header("Audio Variables")]
-    [SerializeField] private AudioClip _munchSound;
+    [SerializeField] private AudioClip[] _munchSounds;
 
     public Mesh ParticleMesh => _munchMesh;
     public Material ParticleMaterial => _munchMaterial;
 
-    public AudioClip Clip => _munchSound;
+    public AudioClip Clip => _munchSounds[Random.Range(0, _munchSounds.Length - 1)];
 }

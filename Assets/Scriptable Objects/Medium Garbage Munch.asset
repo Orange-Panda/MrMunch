@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 723a1f619bed4104bb6d74c6820d1439, type: 3}
+  m_Name: Medium Garbage Munch
+  m_EditorClassIdentifier: 
+  _munchMesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  _munchMaterial: {fileID: 2100000, guid: 32da008fccc7b2443980562c9636728d, type: 2}
+  _munchSounds:
+  - {fileID: 8300000, guid: 2bb5b8c1bb1ad234588f22ea3f6e18a3, type: 3}
+  - {fileID: 8300000, guid: 924efe19b0aef5049a0e862ac2c8046c, type: 3}

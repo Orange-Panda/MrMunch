@@ -2,10 +2,13 @@
 
 public class Monster : MonoBehaviour
 {
-	[SerializeField] private float _fullness;
+    [SerializeField] private MonsterScale _size;
+    [SerializeField] private float _fullness;
 	[SerializeField] private float _max;
 
 	private Material _material;
+
+    public MonsterScale Scale => _size;
 
 	public float PercentageFull => _fullness / _max;
 

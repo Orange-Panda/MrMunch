@@ -107,6 +107,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sizeRequirement: 0
   _fillAmount: 0.5
-  _type: {fileID: 11400000, guid: 043db201a1d3d7a48a07989f40093e58, type: 2}
+  _type: {fileID: 11400000, guid: acbb5b37aafaa31428772490a0118c9a, type: 2}
   Flagged: 0
   Collider: {fileID: 0}

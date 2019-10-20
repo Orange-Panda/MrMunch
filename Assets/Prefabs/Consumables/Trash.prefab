@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 762129839472947207}
   m_Layer: 0
   m_Name: Trash
-  m_TagString: Untagged
+  m_TagString: Consumable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,8 +91,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.46192583, y: 0.587516, z: 0.4695554}
-  m_Center: {x: 0.00000047683716, y: 0.29355106, z: -0.003984943}
+  m_Size: {x: 0.92090285, y: 1.1935577, z: 0.8636832}
+  m_Center: {x: -0.0079520345, y: 0.5965719, z: 0.0050780177}
 --- !u!114 &762129839472947207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,6 +107,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sizeRequirement: 2
   _fillAmount: 0.25
-  _type: {fileID: 11400000, guid: 043db201a1d3d7a48a07989f40093e58, type: 2}
+  _type: {fileID: 11400000, guid: 05cc04e72cb428d4db7d590af6203061, type: 2}
   Flagged: 0
   Collider: {fileID: 0}

@@ -8,11 +8,13 @@ using UnityEngine;
 public class Hand : MonoBehaviour
 {
 	private MonsterMouth mouth;
+	private Monster monster;
 	[SerializeField] private bool _useAnimationEvents = true;
 	private List<Consumable> pickups = new List<Consumable>();
 
 	private void Start()
 	{
+        monster = GetComponentInParent<Monster>();
 		mouth = GetComponentInParent<MonsterMouth>();
 	}
 
@@ -20,8 +22,12 @@ public class Hand : MonoBehaviour
 	{
 		if (other.CompareTag("Consumable"))
 		{
-			var consumable = other.GetComponent<Consumable>();
+            Debug.Log("Collision with " + other.name);
+
+            var consumable = other.GetComponent<Consumable>();
 			if (consumable is null) return;
+
+            if (consumable.SizeRequirement > monster.Scale) return;
 
 			pickups.Add(consumable);
 			consumable.Collider.enabled = false;

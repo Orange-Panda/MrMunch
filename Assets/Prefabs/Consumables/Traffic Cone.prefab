@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4927147770225032191}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Consumable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: -3293809202597520305}
   m_Layer: 0
   m_Name: Traffic Cone
-  m_TagString: Untagged
+  m_TagString: Consumable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,8 +123,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.6125, y: 0.7699999, z: 0.6125}
+  m_Center: {x: 0, y: 0.37625, z: 0}
 --- !u!114 &-3293809202597520305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sizeRequirement: 2
   _fillAmount: 0.25
-  _type: {fileID: 11400000, guid: 043db201a1d3d7a48a07989f40093e58, type: 2}
+  _type: {fileID: 11400000, guid: 05cc04e72cb428d4db7d590af6203061, type: 2}
   Flagged: 0
   Collider: {fileID: 0}
 --- !u!1 &8874065317897889118
@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 3801941570379458933}
   m_Layer: 0
   m_Name: Cube.001
-  m_TagString: Untagged
+  m_TagString: Consumable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

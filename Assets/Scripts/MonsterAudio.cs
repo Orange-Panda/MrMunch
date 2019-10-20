@@ -19,6 +19,7 @@ public class MonsterAudio : MonoBehaviour
     /// <param name="type">Object type</param>
     public void PlayMunchSound(MunchType type)
     {
-        _mouthSource.PlayOneShot(type.Clip);
+        if (type != null )
+            _mouthSource.PlayOneShot(type.Clip);
     }
 }

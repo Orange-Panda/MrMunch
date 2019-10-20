@@ -6,12 +6,23 @@ public class FoodFinder : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
 
+    private Monster monster;
+
+    private void Start()
+    {
+        monster = GetComponent<Monster>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
+        //Debug.Log("Collision with " + other.name);
+
         if (other.CompareTag("Consumable"))
         {
             var consumable = other.GetComponent<Consumable>();
             if (consumable is null) return;
+
+            if (consumable.SizeRequirement > monster.Scale) return;
 
             _animator.SetTrigger("Grab");
 

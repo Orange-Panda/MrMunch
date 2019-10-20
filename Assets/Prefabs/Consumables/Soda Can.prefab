@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7222939504740913715}
   - component: {fileID: 6007470815845399874}
   m_Layer: 0
-  m_Name: sodacan (1)
+  m_Name: Soda Can
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,6 +107,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sizeRequirement: 0
   _fillAmount: 0.25
-  _type: {fileID: 11400000, guid: 1b56bbf64f3057944b89941f9345956b, type: 2}
+  _type: {fileID: 11400000, guid: ceb0e40ffa49cc043bc3a08075f7e80d, type: 2}
   Flagged: 0
   Collider: {fileID: 0}

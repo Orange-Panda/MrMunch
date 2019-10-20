@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3083396045363865082}
   - component: {fileID: 6309942075962875852}
   - component: {fileID: 337175727822938933}
+  - component: {fileID: 6842380976828425394}
+  - component: {fileID: 9179485401430352723}
   m_Layer: 0
   m_Name: Truck
   m_TagString: Consumable
@@ -60,9 +62,9 @@ MeshRenderer:
   - {fileID: -6692065969798888567, guid: ef21e4c8eb907a84387f6b587f5a205c, type: 3}
   - {fileID: -7255647052170860681, guid: ef21e4c8eb907a84387f6b587f5a205c, type: 3}
   - {fileID: 6470628660411565095, guid: ef21e4c8eb907a84387f6b587f5a205c, type: 3}
-  - {fileID: 8556262120643298411, guid: ef21e4c8eb907a84387f6b587f5a205c, type: 3}
+  - {fileID: 2100000, guid: 6da869e79e3c6f94ba5930c7547a7feb, type: 2}
   - {fileID: 1167716875115762238, guid: ef21e4c8eb907a84387f6b587f5a205c, type: 3}
-  - {fileID: 1788269377728665300, guid: ef21e4c8eb907a84387f6b587f5a205c, type: 3}
+  - {fileID: 2100000, guid: 210cb0c554d151b45b10e0cafd52f8d7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,3 +85,33 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &6842380976828425394
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058485350272538601}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.7076106, y: 9.844644, z: 3.3075044}
+  m_Center: {x: 0, y: 2.821903, z: 1.6537522}
+--- !u!114 &9179485401430352723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058485350272538601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff1bd843319fe63499e448e50cc13ceb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sizeRequirement: 3
+  _fillAmount: 0.7
+  _type: {fileID: 11400000, guid: ea15edc13cc71c043969cc18d96e53b8, type: 2}
+  Flagged: 0
+  Collider: {fileID: 0}

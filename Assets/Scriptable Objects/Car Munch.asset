@@ -10,8 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 723a1f619bed4104bb6d74c6820d1439, type: 3}
-  m_Name: Glassy Munch
+  m_Name: Car Munch
   m_EditorClassIdentifier: 
-  _munchMesh: {fileID: 0}
-  _munchMaterial: {fileID: 0}
-  _munchSound: {fileID: 0}
+  _munchMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  _munchMaterial: {fileID: -4833227794668011298, guid: e2747e43faeec4a468b019646c810056,
+    type: 3}
+  _munchSounds:
+  - {fileID: 8300000, guid: 437e4c19f00c727459428ce2b6bdf6ab, type: 3}
+  - {fileID: 8300000, guid: 5a08f1ac40bbf21439d1c0309d449f96, type: 3}
