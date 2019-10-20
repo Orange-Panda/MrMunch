@@ -225,7 +225,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _size: 2
   _fullness: 0
-  _max: 100
+  _max: 1
+  loadSceneOnTransform: 0
+  sceneName: 
   _nextStage: {fileID: 954668317291594138, guid: 38d53ed5cbbd22145ac852d8ea10fb86,
     type: 3}
   _transformationParticle: {fileID: 5677037412173686239, guid: bdd022227589dc74fbf9ae1df26ee7bc,
@@ -244,6 +246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   rotateSpeed: 7
+  jumpForce: 5
 --- !u!114 &954668317291594145
 MonoBehaviour:
   m_ObjectHideFlags: 0

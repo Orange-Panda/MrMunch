@@ -26,7 +26,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e05827f0d7611e418fd1f553e1fc1c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _useAnimationEvents: 1
+  _useAnimationEvents: 0
 --- !u!1 &954668316626042518
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,7 +124,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!82 &954668317291594146
 AudioSource:
@@ -236,7 +236,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _size: 1
   _fullness: 0
-  _max: 100
+  _max: 5
+  loadSceneOnTransform: 1
+  sceneName: Outdoor 1
   _nextStage: {fileID: 954668317291594138, guid: 1a1bf14db4efd8049a0dbd545b111eed,
     type: 3}
   _transformationParticle: {fileID: 5677037412173686239, guid: bdd022227589dc74fbf9ae1df26ee7bc,
@@ -255,6 +257,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   rotateSpeed: 7
+  jumpForce: 5
 --- !u!114 &954668317291594145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,7 +326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e05827f0d7611e418fd1f553e1fc1c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _useAnimationEvents: 1
+  _useAnimationEvents: 0
 --- !u!1001 &3392093321783836515
 PrefabInstance:
   m_ObjectHideFlags: 0

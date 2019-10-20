@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Monster : MonoBehaviour
 {
@@ -7,6 +8,10 @@ public class Monster : MonoBehaviour
     [SerializeField] private float _fullness;
 	[SerializeField] private float _max;
 
+    [SerializeField] private bool loadSceneOnTransform = false;
+    [SerializeField] private string sceneName;
+    
+    [Space(10)]
     [SerializeField] private GameObject _nextStage;
     [SerializeField] private GameObject _transformationParticle;
 
@@ -46,7 +51,8 @@ public class Monster : MonoBehaviour
     {
         if (PercentageFull >= 1 && !transformationBegan)
         {
-            StartCoroutine(TransformRoutine());
+            if (!loadSceneOnTransform) StartCoroutine(TransformRoutine());
+            else SceneManager.LoadScene(sceneName);
         }
     }
 
