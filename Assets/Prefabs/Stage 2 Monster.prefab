@@ -234,6 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd2c8cfad0b5b2a4593006697dd65e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _size: 1
   _fullness: 0
   _max: 100
 --- !u!114 &954668317291594144
@@ -331,16 +332,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player State 2_Animated
       objectReference: {fileID: 0}
-    - target: {fileID: -7181734470756302157, guid: 1faac6406d5f5054c9c7e237c86e8e00,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: f6e18a45b33350840b80f0b21679a162, type: 2}
-    - target: {fileID: -6057140222963153312, guid: 1faac6406d5f5054c9c7e237c86e8e00,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 66337a3c0523d2645ad0464f836ad43e, type: 2}
     - target: {fileID: -4216859302048453862, guid: 1faac6406d5f5054c9c7e237c86e8e00,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -396,6 +387,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 1faac6406d5f5054c9c7e237c86e8e00,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 66337a3c0523d2645ad0464f836ad43e, type: 2}
+    - target: {fileID: -7181734470756302157, guid: 1faac6406d5f5054c9c7e237c86e8e00,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f6e18a45b33350840b80f0b21679a162, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1faac6406d5f5054c9c7e237c86e8e00, type: 3}
 --- !u!1 &6643601034854344298 stripped
