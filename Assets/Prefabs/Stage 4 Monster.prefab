@@ -225,7 +225,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _size: 3
   _fullness: 0
-  _max: 100
+  _max: 20
+  loadSceneOnTransform: 1
+  sceneName: Outdoor 2
   _nextStage: {fileID: 0}
   _transformationParticle: {fileID: 5677037412173686239, guid: bdd022227589dc74fbf9ae1df26ee7bc,
     type: 3}
@@ -243,6 +245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 10
   rotateSpeed: 7
+  jumpForce: 5
 --- !u!114 &954668317291594145
 MonoBehaviour:
   m_ObjectHideFlags: 0
