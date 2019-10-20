@@ -6,13 +6,14 @@ using Cinemachine;
 public class CameraController : MonoBehaviour
 {
 	private CinemachineFreeLook freeLook;
+	private Monster monster;
 
 	private Dictionary<MonsterScale, CameraProperties> cameraProperties = new Dictionary<MonsterScale, CameraProperties>() {
 		{ MonsterScale.Tiny, new CameraProperties(new CinemachineFreeLook.Orbit(1, 2), new CinemachineFreeLook.Orbit(0.5f, 1.5f), new CinemachineFreeLook.Orbit(0.3f, 1f)) },
-		{ MonsterScale.Small, new CameraProperties(new CinemachineFreeLook.Orbit(2, 3), new CinemachineFreeLook.Orbit(1.5f, 3), new CinemachineFreeLook.Orbit(0.5f, 3)) },
-		{ MonsterScale.Medium, new CameraProperties(new CinemachineFreeLook.Orbit(2, 3), new CinemachineFreeLook.Orbit(1.5f, 3), new CinemachineFreeLook.Orbit(0.5f, 3)) },
-		{ MonsterScale.Large, new CameraProperties(new CinemachineFreeLook.Orbit(2, 3), new CinemachineFreeLook.Orbit(1.5f, 3), new CinemachineFreeLook.Orbit(0.5f, 3)) },
-		{ MonsterScale.Huge, new CameraProperties(new CinemachineFreeLook.Orbit(2, 3), new CinemachineFreeLook.Orbit(1.5f, 3), new CinemachineFreeLook.Orbit(0.5f, 3)) }
+		{ MonsterScale.Small, new CameraProperties(new CinemachineFreeLook.Orbit(1, 2), new CinemachineFreeLook.Orbit(0.5f, 1.5f), new CinemachineFreeLook.Orbit(0.3f, 1f))  },
+		{ MonsterScale.Medium, new CameraProperties(new CinemachineFreeLook.Orbit(5, 10), new CinemachineFreeLook.Orbit(2.5f, 6), new CinemachineFreeLook.Orbit(0.5f, 3)) },
+		{ MonsterScale.Large, new CameraProperties(new CinemachineFreeLook.Orbit(5, 10), new CinemachineFreeLook.Orbit(2.5f, 6), new CinemachineFreeLook.Orbit(0.5f, 3)) },
+		{ MonsterScale.Huge, new CameraProperties(new CinemachineFreeLook.Orbit(5, 10), new CinemachineFreeLook.Orbit(2.5f, 6), new CinemachineFreeLook.Orbit(0.5f, 3)) }
 	};
 
 	private void Awake()
@@ -24,15 +25,16 @@ public class CameraController : MonoBehaviour
 	
 	public void CheckForPlayer()
 	{
-		if (freeLook.Follow == null)
+		if (monster == null)
 		{
-			Transform target;
-			if (target = FindObjectOfType<Monster>().transform)
+			if (monster = FindObjectOfType<Monster>())
 			{
-				freeLook.Follow = target;
-				freeLook.LookAt = target;
+				freeLook.Follow = monster.transform;
+				freeLook.LookAt = monster.transform;
 			}
 		}
+
+		SetCameraScale(monster.Scale);
 	}
 
 	/// <summary>

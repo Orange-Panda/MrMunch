@@ -40,12 +40,9 @@ public class MonsterMouth : MonoBehaviour
 			if (foodQueue.Count > 0)
 			{
 				ProcessConsumable(foodQueue.Dequeue());
-				yield return new WaitForSeconds(eatDelay);
 			}
-			else
-			{
-				yield return null;
-			}
+
+			yield return new WaitForSeconds(eatDelay);
 		}
 	}
 
