@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using MusicMaster;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -21,7 +22,9 @@ public class Monster : MonoBehaviour
 
 	public float PercentageFull => _fullness / _max;
 
-	public float Fullness
+    ///bool playedSong = false;
+
+    public float Fullness
 	{
 		get => _fullness;
 
