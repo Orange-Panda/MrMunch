@@ -177,8 +177,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd2c8cfad0b5b2a4593006697dd65e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _size: 0
   _fullness: 0
   _max: 100
+  _nextStage: {fileID: 954668317291594138, guid: 545ca0693b2e77644acc8f37e5ef4f08,
+    type: 3}
+  _transformationParticle: {fileID: 5677037412173686239, guid: bdd022227589dc74fbf9ae1df26ee7bc,
+    type: 3}
 --- !u!114 &4482821237449771663
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -22,8 +22,6 @@ public class Hand : MonoBehaviour
 	{
 		if (other.CompareTag("Consumable"))
 		{
-            Debug.Log("Collision with " + other.name);
-
             var consumable = other.GetComponent<Consumable>();
 			if (consumable is null) return;
 
