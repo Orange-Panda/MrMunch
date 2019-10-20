@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7862992949715358234
+--- !u!1 &5723955833162662897
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,25 +8,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6576856024525414409}
-  - component: {fileID: 2746818685279050303}
-  - component: {fileID: 8440344253480920774}
-  - component: {fileID: 7573548563002868728}
-  - component: {fileID: 1700266140054732572}
+  - component: {fileID: 8733828056922812898}
+  - component: {fileID: 319699391494900692}
+  - component: {fileID: 6292449573377783597}
+  - component: {fileID: -8720543036032435143}
+  - component: {fileID: 762129839472947207}
   m_Layer: 0
-  m_Name: Tree2
-  m_TagString: Consumable
+  m_Name: Trash
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6576856024525414409
+--- !u!4 &8733828056922812898
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7862992949715358234}
+  m_GameObject: {fileID: 5723955833162662897}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -34,21 +34,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2746818685279050303
+--- !u!33 &319699391494900692
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7862992949715358234}
-  m_Mesh: {fileID: 2534964839176971238, guid: baf2cd1e88b10ba499c18aca32f7520a, type: 3}
---- !u!23 &8440344253480920774
+  m_GameObject: {fileID: 5723955833162662897}
+  m_Mesh: {fileID: 4711208715938537054, guid: fc756c589a275ba4fa2056c63cfea910, type: 3}
+--- !u!23 &6292449573377783597
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7862992949715358234}
+  m_GameObject: {fileID: 5723955833162662897}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -59,8 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8004cf7bd1a87034dacf4bbc969625b2, type: 2}
-  - {fileID: 2100000, guid: 929a60c92aa40864da1cd2ea1d88bce1, type: 2}
+  - {fileID: 2679770013885409833, guid: fc756c589a275ba4fa2056c63cfea910, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -81,33 +80,33 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7573548563002868728
+--- !u!65 &-8720543036032435143
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7862992949715358234}
+  m_GameObject: {fileID: 5723955833162662897}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.2683082, y: 5.0574136, z: 3.3709326}
-  m_Center: {x: -0.027150273, y: 2.5287068, z: -0.012150288}
---- !u!114 &1700266140054732572
+  m_Size: {x: 0.46192583, y: 0.587516, z: 0.4695554}
+  m_Center: {x: 0.00000047683716, y: 0.29355106, z: -0.003984943}
+--- !u!114 &762129839472947207
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7862992949715358234}
+  m_GameObject: {fileID: 5723955833162662897}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff1bd843319fe63499e448e50cc13ceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sizeRequirement: 3
-  _fillAmount: 0.5
+  _sizeRequirement: 2
+  _fillAmount: 0.25
   _type: {fileID: 11400000, guid: 043db201a1d3d7a48a07989f40093e58, type: 2}
   Flagged: 0
   Collider: {fileID: 0}

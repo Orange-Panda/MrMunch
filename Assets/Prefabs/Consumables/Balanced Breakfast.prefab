@@ -165,6 +165,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: coffeecup
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 9ce5cb36dd6d47649a0ab082748575a6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Consumable
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9ce5cb36dd6d47649a0ab082748575a6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -265,6 +270,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: fork and spoon
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 4f0900825dc8c9b4eb927665d7b1a13c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Consumable
+      objectReference: {fileID: 0}
+    - target: {fileID: -5130649555637502139, guid: 4f0900825dc8c9b4eb927665d7b1a13c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Consumable
+      objectReference: {fileID: 0}
+    - target: {fileID: -3093160379788043264, guid: 4f0900825dc8c9b4eb927665d7b1a13c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Consumable
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 4f0900825dc8c9b4eb927665d7b1a13c,
         type: 3}
@@ -413,6 +433,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bacon
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 18c5069927c8ee14a8c618a1e030ce38,
+        type: 3}
+      propertyPath: m_TagString
+      value: Consumable
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 18c5069927c8ee14a8c618a1e030ce38,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -502,6 +527,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: egg
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 54f575f4d4f796e40821f4b6a27f3080,
+        type: 3}
+      propertyPath: m_TagString
+      value: Consumable
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 54f575f4d4f796e40821f4b6a27f3080,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -590,6 +620,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: plate
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: f59e0fff5935a6b4eaa0981aae9892d2,
+        type: 3}
+      propertyPath: m_TagString
+      value: Consumable
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f59e0fff5935a6b4eaa0981aae9892d2,
         type: 3}
@@ -686,6 +721,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: bacon (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 18c5069927c8ee14a8c618a1e030ce38,
+        type: 3}
+      propertyPath: m_TagString
+      value: Consumable
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 18c5069927c8ee14a8c618a1e030ce38,
         type: 3}

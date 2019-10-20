@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7862992949715358234
+--- !u!1 &4196031641258880330
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6576856024525414409}
-  - component: {fileID: 2746818685279050303}
-  - component: {fileID: 8440344253480920774}
-  - component: {fileID: 7573548563002868728}
-  - component: {fileID: 1700266140054732572}
+  - component: {fileID: 891736173454434137}
+  - component: {fileID: 8159137054963344751}
+  - component: {fileID: 2452098428450822550}
+  - component: {fileID: 7222939504740913715}
+  - component: {fileID: 6007470815845399874}
   m_Layer: 0
-  m_Name: Tree2
-  m_TagString: Consumable
+  m_Name: sodacan (1)
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6576856024525414409
+--- !u!4 &891736173454434137
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7862992949715358234}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_GameObject: {fileID: 4196031641258880330}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2746818685279050303
+--- !u!33 &8159137054963344751
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7862992949715358234}
-  m_Mesh: {fileID: 2534964839176971238, guid: baf2cd1e88b10ba499c18aca32f7520a, type: 3}
---- !u!23 &8440344253480920774
+  m_GameObject: {fileID: 4196031641258880330}
+  m_Mesh: {fileID: 2534964839176971238, guid: eb168bcd42589284080d4d89e52b7d03, type: 3}
+--- !u!23 &2452098428450822550
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7862992949715358234}
+  m_GameObject: {fileID: 4196031641258880330}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -59,8 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8004cf7bd1a87034dacf4bbc969625b2, type: 2}
-  - {fileID: 2100000, guid: 929a60c92aa40864da1cd2ea1d88bce1, type: 2}
+  - {fileID: 2100000, guid: 76fbd09f905ef6f46ac51d829549e91d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -81,33 +80,33 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7573548563002868728
+--- !u!65 &7222939504740913715
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7862992949715358234}
+  m_GameObject: {fileID: 4196031641258880330}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.2683082, y: 5.0574136, z: 3.3709326}
-  m_Center: {x: -0.027150273, y: 2.5287068, z: -0.012150288}
---- !u!114 &1700266140054732572
+  m_Size: {x: 0.0011145989, y: 0.00071967184, z: 0.000720214}
+  m_Center: {x: 0.000028079958, y: -0.000009836031, z: 0.00035904587}
+--- !u!114 &6007470815845399874
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7862992949715358234}
+  m_GameObject: {fileID: 4196031641258880330}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff1bd843319fe63499e448e50cc13ceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sizeRequirement: 3
-  _fillAmount: 0.5
-  _type: {fileID: 11400000, guid: 043db201a1d3d7a48a07989f40093e58, type: 2}
+  _sizeRequirement: 0
+  _fillAmount: 0.25
+  _type: {fileID: 11400000, guid: 1b56bbf64f3057944b89941f9345956b, type: 2}
   Flagged: 0
   Collider: {fileID: 0}

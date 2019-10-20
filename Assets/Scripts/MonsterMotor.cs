@@ -5,11 +5,12 @@
 /// </summary>
 public class MonsterMotor : MonoBehaviour
 {
-	new private Camera camera;
+    [SerializeField] private float moveSpeed = 10;
+    [SerializeField] private float rotateSpeed = 7;
+
+    new private Camera camera;
 	new private Rigidbody rigidbody;
 	private Animator animator;
-	private float moveSpeed = 10;
-	private float rotateSpeed = 7;
 	private Quaternion lastDirection;
 	private int layerMask;
 

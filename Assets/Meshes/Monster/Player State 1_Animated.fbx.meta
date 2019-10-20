@@ -1,8 +1,20 @@
 fileFormatVersion: 2
-guid: 88742f99b5d637c42960b2c73f9b373f
+guid: 571655be2d429d7499bd36521e1a6f52
 ModelImporter:
   serializedVersion: 26
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -3880581976594992817
+    second: ArmatureAction
+  - first:
+      74: 5539831331247536789
+    second: Jump
+  - first:
+      74: -8945691123924629249
+    second: Armature|Idle
+  - first:
+      74: 1079665108409675491
+    second: Armature|Jump
   externalObjects: {}
   materials:
     importMaterials: 1
