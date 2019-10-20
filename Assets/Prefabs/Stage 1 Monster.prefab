@@ -51,8 +51,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.093790054
-  m_Center: {x: 0, y: 0.093790054, z: 0}
+  m_Radius: 0.1
+  m_Center: {x: 0, y: 0.075, z: 0}
 --- !u!54 &4482821237449771658
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70cc86dc6408bed429d12288afcb190a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eatDelay: 0.5
+  eatDelay: 0.25
   _munchFX: {fileID: 3721445734587494056}
   _mouthOrigin: {fileID: 4482821238920164790}
 --- !u!114 &4482821237449771660
