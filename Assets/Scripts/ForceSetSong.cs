@@ -12,7 +12,7 @@ public class ForceSetSong : MonoBehaviour
     {
         _caller = FindObjectOfType<CallMusicExample>();
 
-        _caller.songNumber = songnumber;
+        _caller.SetSong(songnumber);
     }
 
     // Update is called once per frame

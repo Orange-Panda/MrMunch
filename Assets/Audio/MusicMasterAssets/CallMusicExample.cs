@@ -12,7 +12,7 @@ public class CallMusicExample : MonoBehaviour
 	public float Progress;
 	bool playedSong = false;
 
-    public int songNumber = 0;
+    private int songNumber = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -32,11 +32,11 @@ public class CallMusicExample : MonoBehaviour
     //    SceneManager.sceneLoaded -= ResetForLoad;
     //}
 
-    //void ResetForLoad(Scene scene, LoadSceneMode mode)
-    //{
-    //    sceneIndex = GetSongNumber(scene.buildIndex);
-    //    playedSong = false;
-    //}
+    public void SetSong(int song)
+    {
+        songNumber = song;
+        playedSong = false;
+    }
 
     // Update is called once per frame
     void Update()
