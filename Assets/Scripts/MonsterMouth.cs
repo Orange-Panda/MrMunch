@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
@@ -10,13 +11,12 @@ public class MonsterMouth : MonoBehaviour
     private Monster _monster;
     private MonsterAudio _audio;
 
-    [SerializeField] private float _eatSpeed = 1;
+	[Range(0.1f, 2f)]
+	[SerializeField] private float eatDelay = 0.5f;
     [SerializeField] private MunchFX _munchFX;
     [SerializeField] private Transform _mouthOrigin;
 
-    private Queue<Consumable> _foodQueue = new Queue<Consumable>();
-
-    private float _timeSinceLastEat = 0;
+    private Queue<Consumable> foodQueue = new Queue<Consumable>();
 
     private void Start()
     {
@@ -26,42 +26,49 @@ public class MonsterMouth : MonoBehaviour
         Assert.IsNotNull(_monster);
         Assert.IsNotNull(_audio);
         Assert.IsNotNull(_munchFX);
+
+		StartCoroutine(Eat());
     }
 
-    private void Update()
-    {
-        if (_foodQueue.Count > 0)
-        {
-            if (Time.time - _timeSinceLastEat > _eatSpeed)
-            {
-                Process(_foodQueue.Dequeue());
-                _timeSinceLastEat = Time.time;
-            }
-        }
-    }
+	/// <summary>
+	/// Processes food at the frequency of eatDelay.
+	/// </summary>
+	private IEnumerator Eat()
+	{
+		while (gameObject.activeSelf)
+		{
+			if (foodQueue.Count > 0)
+			{
+				ProcessConsumable(foodQueue.Dequeue());
+				yield return new WaitForSeconds(eatDelay);
+			}
+			else
+			{
+				yield return null;
+			}
+		}
+	}
 
-    public void Eat(Consumable consumable)
+	/// <summary>
+	/// Adds a consumable to the queue of objects to eat.
+	/// </summary>
+	/// <param name="consumable">The consumable to queue.</param>
+    public void QueueForEating(Consumable consumable)
     {
         consumable.transform.position = _mouthOrigin.position;
         consumable.transform.parent = _mouthOrigin;
-
-        _foodQueue.Enqueue(consumable);
+        foodQueue.Enqueue(consumable);
     }
 
-    public void Process(Consumable consumable)
+	/// <summary>
+	/// Processes the consumable by playing feedback, then destroying it.
+	/// </summary>
+	/// <param name="consumable">The consumable to process</param>
+    public void ProcessConsumable(Consumable consumable)
     {
-        // Fill bar
         _monster.Fullness += consumable.FillAmount;
-
-        // Play Audio
         _audio.PlayMunchSound(consumable.Type);
-
-        // Play FX
         _munchFX.PlayMunchParticles(consumable.Type);
-
-        // Destroy consumable
         Destroy(consumable.gameObject);
-
-        // etc.
     }
 }
