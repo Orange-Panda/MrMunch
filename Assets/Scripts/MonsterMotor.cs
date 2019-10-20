@@ -7,6 +7,7 @@ public class MonsterMotor : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 10;
     [SerializeField] private float rotateSpeed = 7;
+	[SerializeField] private float jumpForce = 5;
 
     new private Camera camera;
 	new private Rigidbody rigidbody;
@@ -48,5 +49,12 @@ public class MonsterMotor : MonoBehaviour
 
 		// Move player
 		rigidbody.MovePosition(transform.position + moveDirection * Time.deltaTime * inputAmount * moveSpeed);
+
+		//Jump
+		if (Input.GetButtonDown("Jump") && Mathf.Abs(rigidbody.velocity.y) < 0.01f)
+		{
+			Vector3 jumpDirection = new Vector3(moveDirection.x * inputAmount * 0.25f, 1, moveDirection.z * inputAmount * 0.25f);
+			rigidbody.AddForce(jumpDirection * jumpForce, ForceMode.Impulse);
+		}
 	}
 }

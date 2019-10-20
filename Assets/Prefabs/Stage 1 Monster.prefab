@@ -177,6 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd2c8cfad0b5b2a4593006697dd65e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _size: 0
   _fullness: 0
   _max: 100
 --- !u!114 &4482821237449771663
@@ -193,6 +194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2.75
   rotateSpeed: 7
+  jumpForce: 5
 --- !u!114 &4482821237449771662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,7 +310,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.17
+  m_Radius: 0.32
   m_Center: {x: 0, y: 0.1, z: 0.06}
 --- !u!1001 &706122448972439273
 PrefabInstance:
