@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18072599, g: 0.22624137, b: 0.30715674, a: 1}
+  m_IndirectSpecularColor: {r: 0.18072541, g: 0.22624052, b: 0.3071553, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1554,16 +1554,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: diner 3
       objectReference: {fileID: 0}
-    - target: {fileID: 1096829827341263740, guid: 157935872e0cfd24d8d64793aa312b47,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -650722757169144853, guid: 157935872e0cfd24d8d64793aa312b47,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: -9155873891985476603, guid: 157935872e0cfd24d8d64793aa312b47,
         type: 3}
       propertyPath: m_Enabled
@@ -1634,10 +1624,20 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6957e3b558fa7264aba223c9adb82fa0, type: 2}
+    - target: {fileID: -650722757169144853, guid: 157935872e0cfd24d8d64793aa312b47,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -303113575039499904, guid: 157935872e0cfd24d8d64793aa312b47,
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096829827341263740, guid: 157935872e0cfd24d8d64793aa312b47,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4280971360329466848, guid: 157935872e0cfd24d8d64793aa312b47,
         type: 3}
@@ -7209,11 +7209,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3943619149792629317, guid: ed9e11615887dbc47bc232f4e44c3b4a,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed9e11615887dbc47bc232f4e44c3b4a, type: 3}
