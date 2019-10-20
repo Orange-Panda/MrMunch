@@ -314,7 +314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e05827f0d7611e418fd1f553e1fc1c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _useAnimationEvents: 1
+  _useAnimationEvents: 0
 --- !u!114 &7307008895849874447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -355,7 +355,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e05827f0d7611e418fd1f553e1fc1c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _useAnimationEvents: 1
+  _useAnimationEvents: 0
 --- !u!1001 &3868946572616321531
 PrefabInstance:
   m_ObjectHideFlags: 0
