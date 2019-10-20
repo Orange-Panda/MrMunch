@@ -9,7 +9,6 @@ public class AnimationEventHandler : MonoBehaviour
 
     private void LeftHand()
     {
-        Debug.Log("Eating");
         _leftHand.EatPickUps();
     }
 

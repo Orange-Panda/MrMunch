@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70cc86dc6408bed429d12288afcb190a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eatDelay: 0.5
+  eatDelay: 0.25
   _munchFX: {fileID: 48621234841445767}
   _mouthOrigin: {fileID: 954668316626042521}
 --- !u!114 &954668317291594147
