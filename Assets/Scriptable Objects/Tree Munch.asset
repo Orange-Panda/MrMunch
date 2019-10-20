@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 723a1f619bed4104bb6d74c6820d1439, type: 3}
   m_Name: Tree Munch
   m_EditorClassIdentifier: 
-  _munchMesh: {fileID: 0}
-  _munchMaterial: {fileID: 0}
+  _munchMesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  _munchMaterial: {fileID: 2100000, guid: 929a60c92aa40864da1cd2ea1d88bce1, type: 2}
   _munchSounds:
   - {fileID: 8300000, guid: cf57da2de38a0fa408cdfe9e48fba282, type: 3}
   - {fileID: 8300000, guid: 4a9a4a4456b3a4a478bfa8e1b2515b78, type: 3}

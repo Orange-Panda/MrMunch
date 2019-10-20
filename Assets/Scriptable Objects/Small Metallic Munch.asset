@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Small Metallic Munch
   m_EditorClassIdentifier: 
   _munchMesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  _munchMaterial: {fileID: 0}
+  _munchMaterial: {fileID: -4833227794668011298, guid: e2747e43faeec4a468b019646c810056,
+    type: 3}
   _munchSounds:
   - {fileID: 8300000, guid: 5cfee92de409ff344bcc5a13d33e7e6f, type: 3}
   - {fileID: 8300000, guid: 42972fc77d50d6548830a1041169bc2d, type: 3}

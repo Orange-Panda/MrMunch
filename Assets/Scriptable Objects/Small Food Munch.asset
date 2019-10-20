@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Small Food Munch
   m_EditorClassIdentifier: 
   _munchMesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
-  _munchMaterial: {fileID: 0}
+  _munchMaterial: {fileID: 2100000, guid: f99878cbb2bbc8a44aef36c543d9c210, type: 2}
   _munchSounds:
   - {fileID: 8300000, guid: d69ac13f926c9a94a87e1dcce7104ef0, type: 3}
   - {fileID: 8300000, guid: 42972fc77d50d6548830a1041169bc2d, type: 3}
