@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _munchMesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
   _munchMaterial: {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
-  _munchSound: {fileID: 8300000, guid: 9cdadb13cb664b949b58a4416fad487f, type: 3}
+  _munchSound: {fileID: 8300000, guid: 17f710c7a3a36f945bd170ecef184db5, type: 3}
