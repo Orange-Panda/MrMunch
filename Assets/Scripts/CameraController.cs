@@ -13,7 +13,7 @@ public class CameraController : MonoBehaviour
 		{ MonsterScale.Small, new CameraProperties(new CinemachineFreeLook.Orbit(1, 2), new CinemachineFreeLook.Orbit(0.5f, 1.5f), new CinemachineFreeLook.Orbit(0.3f, 1f))  },
 		{ MonsterScale.Medium, new CameraProperties(new CinemachineFreeLook.Orbit(5, 10), new CinemachineFreeLook.Orbit(2.5f, 6), new CinemachineFreeLook.Orbit(0.5f, 3)) },
 		{ MonsterScale.Large, new CameraProperties(new CinemachineFreeLook.Orbit(5, 10), new CinemachineFreeLook.Orbit(2.5f, 6), new CinemachineFreeLook.Orbit(0.5f, 3)) },
-		{ MonsterScale.Huge, new CameraProperties(new CinemachineFreeLook.Orbit(5, 10), new CinemachineFreeLook.Orbit(2.5f, 6), new CinemachineFreeLook.Orbit(0.5f, 3)) }
+		{ MonsterScale.Huge, new CameraProperties(new CinemachineFreeLook.Orbit(85, 75), new CinemachineFreeLook.Orbit(70f, 50), new CinemachineFreeLook.Orbit(60f, 35f)) }
 	};
 
 	private void Awake()
