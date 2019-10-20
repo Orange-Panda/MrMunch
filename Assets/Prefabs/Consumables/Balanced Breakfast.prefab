@@ -29,6 +29,7 @@ MonoBehaviour:
   _fillAmount: 0.1
   _type: {fileID: 11400000, guid: 1b56bbf64f3057944b89941f9345956b, type: 2}
   Flagged: 0
+  Collider: {fileID: 0}
 --- !u!65 &9210426537370022333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58,6 +59,7 @@ MonoBehaviour:
   _fillAmount: 0.5
   _type: {fileID: 11400000, guid: 043db201a1d3d7a48a07989f40093e58, type: 2}
   Flagged: 0
+  Collider: {fileID: 0}
 --- !u!65 &314656406215417185
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -87,6 +89,7 @@ MonoBehaviour:
   _fillAmount: 0.1
   _type: {fileID: 11400000, guid: 6f994ed4ffa79ff41b02bde8a0814839, type: 2}
   Flagged: 0
+  Collider: {fileID: 0}
 --- !u!1 &7375986374659602037
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,6 +152,7 @@ MonoBehaviour:
   _fillAmount: 0.1
   _type: {fileID: 11400000, guid: 1b56bbf64f3057944b89941f9345956b, type: 2}
   Flagged: 0
+  Collider: {fileID: 0}
 --- !u!1001 &5919673699700851686
 PrefabInstance:
   m_ObjectHideFlags: 0

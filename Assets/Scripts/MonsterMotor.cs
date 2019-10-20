@@ -41,7 +41,9 @@ public class MonsterMotor : MonoBehaviour
 		transform.rotation = Quaternion.Slerp(transform.rotation, lastDirection, Time.deltaTime * rotateSpeed);
 
 		// Animator state
-		animator.SetBool("Moving", inputAmount != 0);
+		//animator.SetBool("Moving", inputAmount != 0);
+        animator.SetFloat("Forward", inputAmount);
+        //animator.SetTrigger("Grab");
 
 		// Move player
 		rigidbody.MovePosition(transform.position + moveDirection * Time.deltaTime * inputAmount * moveSpeed);

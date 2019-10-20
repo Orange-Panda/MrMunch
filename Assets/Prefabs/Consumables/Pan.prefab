@@ -109,3 +109,4 @@ MonoBehaviour:
   _fillAmount: 0.25
   _type: {fileID: 11400000, guid: 1b56bbf64f3057944b89941f9345956b, type: 2}
   Flagged: 0
+  Collider: {fileID: 0}
