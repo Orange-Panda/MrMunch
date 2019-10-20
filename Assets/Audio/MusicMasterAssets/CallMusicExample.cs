@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using MusicMaster;
+using UnityEngine.SceneManagement;
 
 public class CallMusicExample : MonoBehaviour
 {
@@ -11,10 +12,14 @@ public class CallMusicExample : MonoBehaviour
 	public float Progress;
 	bool playedSong = false;
 
+    private int sceneIndex;
+
     // Start is called before the first frame update
     void Start()
     {
         monster = FindMonster();
+
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
     // Update is called once per frame
@@ -26,12 +31,31 @@ public class CallMusicExample : MonoBehaviour
             if (playedSong == false)
             {
                 playedSong = true;
-                MusicController.PlaySong(1);
+                MusicController.PlaySong(GetSongNumber(sceneIndex));
             }
             MusicController.SetProgress(monster.PercentageFull); // 0 = starting, .5 = halfway there, 1 = finished!
 
             Progress = monster.PercentageFull;
         }
+    }
+
+    public int GetSongNumber(int buildindex)
+    {
+        switch (buildindex)
+        {
+            case 0:
+                return 0;
+            case 1:
+                return 0;
+            case 2:
+                return 1;
+            case 3:
+                return 1;
+            case 4:
+                return 2;
+        }
+
+        return 0;
     }
 
     public Monster FindMonster()
