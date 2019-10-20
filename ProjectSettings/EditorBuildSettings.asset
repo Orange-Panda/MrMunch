@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Outdoor 2.unity
     guid: ce78045a7766beb4a942e5b3ae780e87
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: 9b8a54ad70d83cd4b9e5f58a7d1f5957
   m_configObjects: {}
