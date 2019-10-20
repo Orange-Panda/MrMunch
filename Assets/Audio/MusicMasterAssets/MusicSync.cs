@@ -39,6 +39,8 @@ namespace MusicMaster
 		// Start is called before the first frame update
 		void Start()
 		{
+            DontDestroyOnLoad(this);
+
 			myAudioSource = gameObject.GetComponent<AudioSource>();
 			myAudioSource.loop = true;
 			MusicController.AddTrack(SongIndexNumber, TrackIndexNumber, this);
