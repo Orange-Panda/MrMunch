@@ -8,6 +8,7 @@ public class Timer : MonoBehaviour
     [SerializeField] private float _startTimeSeconds;
 
     public float TimeRemaining { get; private set; }
+	public float StartTime => (_startTimeMinutes * 60) + _startTimeSeconds;
 
     [SerializeField] private bool _running = false;
 
