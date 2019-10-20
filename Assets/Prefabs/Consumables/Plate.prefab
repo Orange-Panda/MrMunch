@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2957199626043688620}
   - component: {fileID: 6075659204936318106}
   - component: {fileID: 535254011469906019}
+  - component: {fileID: 8311749365793734228}
   - component: {fileID: 7739076131285572093}
   m_Layer: 0
   m_Name: Plate
@@ -79,6 +80,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &8311749365793734228
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2256669261711176895}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0029999998, y: 0.0029999993, z: 0.0003499998}
+  m_Center: {x: 0, y: 0, z: 0.0001749999}
 --- !u!114 &7739076131285572093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,3 +109,4 @@ MonoBehaviour:
   _fillAmount: 0.1
   _type: {fileID: 11400000, guid: 6f994ed4ffa79ff41b02bde8a0814839, type: 2}
   Flagged: 0
+  Collider: {fileID: 0}

@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Diner.unity
+    guid: 58ef016276f77bb4a87683de079601d2
+  - enabled: 1
+    path: Assets/Scenes/Outdoor 1.unity
+    guid: 5949401ca9137824f949f3263fa9256a
   m_configObjects: {}
