@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 /// <summary>
 /// Locks the cursor and hides it.
@@ -7,13 +8,17 @@ public class CursorLock : MonoBehaviour
 {
 	private void OnEnable()
 	{
-		Cursor.visible = false;
-		Cursor.lockState = CursorLockMode.Locked;
+		LockCursor(true);
 	}
 
 	private void OnDisable()
 	{
-		Cursor.visible = true;
-		Cursor.lockState = CursorLockMode.None;
+		LockCursor(false);
+	}
+
+	internal static void LockCursor(bool value)
+	{
+		Cursor.visible = !value;
+		Cursor.lockState = value ? CursorLockMode.Locked : CursorLockMode.None;
 	}
 }
