@@ -16,7 +16,7 @@ public class Timer : MonoBehaviour
 
     private void Start()
     {
-        _text = GetComponent<TMPro.TMP_Text>();
+        //_text = GetComponent<TMPro.TMP_Text>();
         TimeRemaining = _startTimeSeconds + _startTimeMinutes * 60;
     }
 
@@ -29,7 +29,7 @@ public class Timer : MonoBehaviour
             var minutes = Mathf.Floor(TimeRemaining / 60).ToString("00");
             var seconds = Mathf.RoundToInt(TimeRemaining % 60).ToString("00");
 
-            _text.text = $"{minutes}:{seconds}";
+            //_text.text = $"{minutes}:{seconds}";
         }
     }
 }
